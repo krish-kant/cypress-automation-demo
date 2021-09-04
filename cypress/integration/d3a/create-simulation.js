@@ -111,7 +111,7 @@ Then(`I check that new simulation is created and is listed correctly`, () => {
   cy.get('.TimelineIntervals').should('exist');
    //verify modelling page contains title element
   cy.get('.configurationPage__hello-title').should('have.text', 'Start by adding your first node...');
-   //verify modelling page contains timeline element
+   //verify modelling page contains create modelling diamond button element
    cy.get('.action-diamond-wrapper').should('exist');
 
 });

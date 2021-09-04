@@ -22,7 +22,7 @@ And(`I enter {string} in the email field`, (email_id) => {
 });
 
 And(`I enter {string} in the password field`, (password) => {
-  // Fill the username
+  // Fill the password
   cy.get('[id="password"]').type(password).should("have.value", password);
 });
 
