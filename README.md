@@ -3,11 +3,15 @@ d3a.io automation using cypress and javascript with Cucumber.
 
 Test location : cypress/integration
 
-# Feature file
+# Feature File
 
 ![Screenshot](feature_file.png) 
 
-# Run tests
+# Test Results
+
+![screen-gif](results.gif)
+
+# Run Tests
 
 ```
 npm install
@@ -32,7 +36,7 @@ https://dashboard.cypress.io/projects/pv5nq9
 
 ![Screenshot](cypress_dashboard.png) 
 
-## To generate cucumber reportn after test is complete
+## To generate cucumber report after test is complete
 ```
 node cucumber-html-reporter.js
 ``` 
