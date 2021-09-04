@@ -1,0 +1,32 @@
+{
+  "name": "d3a.io-automation-demo",
+  "version": "1.0.0",
+  "description": "Example of cypress with cucumber",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run --spec \"**/*.feature\"",
+    "test:all": "cypress run --spec \"**/*.features\""
+  },
+  "keywords": [
+    "cypress",
+    "cucumber",
+    "testing"
+  ],
+  "dependencies": {
+    "cypress-cucumber-preprocessor": "^2.5.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
+  },
+  "devDependencies": {
+    "cucumber-html-reporter": "^5.5.0",
+    "cypress": "^8.3.1",
+    "cypress-localstorage-commands": "^1.5.0"
+  }
+}
