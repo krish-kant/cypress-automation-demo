@@ -20,8 +20,8 @@ jobs:
       # Alternative: create and commit an empty cypress/screenshots folder
       # to always have something to upload
 
-      # - name: generate cucumber test report
-      #   run: npm run cucumber-report
+      - name: generate cucumber test report
+        run: npm run cucumber-report
 
       - uses: actions/upload-artifact@v2
         if: failure()
@@ -35,11 +35,11 @@ jobs:
           name: cypress-videos
           path: cypress/videos
 
-       - uses: actions/upload-artifact@v2
-        if: always()
-        with:
-          name: cucumber-report
-          path: cypress/reports
+      #  - uses: actions/upload-artifact@v2
+      #   if: always()
+      #   with:
+      #     name: cucumber-report
+      #     path: cypress/reports
     
 
           
