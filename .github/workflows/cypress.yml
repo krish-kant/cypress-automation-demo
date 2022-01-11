@@ -18,6 +18,10 @@ jobs:
       # thus we store screenshots only on failures
       # Alternative: create and commit an empty cypress/screenshots folder
       # to always have something to upload
+
+      - name: generate cucumber test report
+        run: npm run cucumber-report
+
       - uses: actions/upload-artifact@v2
         if: failure()
         with:
@@ -29,14 +33,12 @@ jobs:
         with:
           name: cypress-videos
           path: cypress/videos
+
+       - uses: actions/upload-artifact@v2
+        if: always()
+        with:
+          name: cucumber-report
+          path: cypress/reports
     
 
-      - name: generate cucumber test report
-        run: npm run cucumber-report
-      
-      - name: deploy report page to GitHub Page
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./
           
