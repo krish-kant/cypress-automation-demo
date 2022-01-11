@@ -29,7 +29,7 @@ jobs:
         with:
           name: cypress-videos
           path: cypress/videos
-      
+    
 
       - name: Merge test reports
         run: npm run cucumber-report
@@ -38,5 +38,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./reports/cucumber_report.html
+          publish_dir: ./reports
           
