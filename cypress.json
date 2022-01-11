@@ -1,5 +1,8 @@
 {
   "ignoreTestFiles": "*.js",
   "testFiles": "**/*.{feature,features}",
-  "projectId": "pv5nq9"
+  "projectId": "pv5nq9",
+  "retries": {
+    "runMode": 2
+  }
 }

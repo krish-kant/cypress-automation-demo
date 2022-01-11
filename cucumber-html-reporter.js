@@ -1,7 +1,7 @@
 const reporter = require('cucumber-html-reporter');
 
 const options = {
-  theme: 'hierarchy',
+  theme: 'bootstrap',
   jsonDir: 'cypress/cucumber-json',
   output: 'cucumber_report.html',
   reportSuiteAsScenarios: true,
@@ -10,7 +10,7 @@ const options = {
   ignoreBadJsonFile: true,
   scenarioTimestamp: true,
   metadata: {
-    "App Version": "1.0.0",
+    // "App Version": "1.0.0",
     "Test Environment": "STAGING",
     "Browser": "Chrome  54.0.2840.98",
     "Platform": "Windows 10",

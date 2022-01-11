@@ -8,7 +8,7 @@ on: [push]
 jobs:
   cypress-run:
     runs-on: ubuntu-20.04
-    name: Artifacts
+    name: run cypress tests and generate report
     steps:
       - uses: actions/checkout@v2
       - uses: cypress-io/github-action@v2
@@ -31,10 +31,10 @@ jobs:
           path: cypress/videos
     
 
-      - name: Merge test reports
+      - name: generate cucumber test report
         run: npm run cucumber-report
       
-      - name: Deploy report page to GitHub Page
+      - name: deploy report page to GitHub Page
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
