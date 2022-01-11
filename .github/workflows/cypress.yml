@@ -19,7 +19,7 @@ jobs:
       # Alternative: create and commit an empty cypress/screenshots folder
       # to always have something to upload
       - uses: actions/upload-artifact@v2
-        if: always()
+        if: failure()
         with:
           name: cypress-screenshots
           path: cypress/screenshots
@@ -38,9 +38,6 @@ jobs:
 
       - name: Merge test reports
         run: npm run cucumber-report
-
-      - name: Generate HTML report
-        run: npm run generate:report
       
       - name: Deploy report page to GitHub Page
         uses: peaceiris/actions-gh-pages@v3
