@@ -17,7 +17,14 @@ jobs:
       # NOTE: screenshots will be generated only if E2E test failed
       # thus we store screenshots only on failures
       # Alternative: create and commit an empty cypress/screenshots folder
+
+
       # to always have something to upload
+
+
+      - name: generate cucumber test report
+        run: npm run cucumber-report
+
       - uses: actions/upload-artifact@v2
         if: failure()
         with:
@@ -29,10 +36,12 @@ jobs:
         with:
           name: cypress-videos
           path: cypress/videos
+          name: cucumber-report
+          path: reports
     
 
-      - name: generate cucumber test report
-        run: npm run cucumber-report
+ 
+
       
 
           
