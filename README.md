@@ -1,5 +1,5 @@
-# d3a.io-automation-demo
-d3a.io automation using cypress and javascript with Cucumber.
+
+automation using cypress and javascript with Cucumber.
 
 Test location : cypress/integration
 
@@ -18,12 +18,6 @@ npm test
 ```
 npx cypress open
 ```
-
-## To run tests in background and record on cypress dashboard to see video
-```
-npx cypress run --record --key 4ce5524b-be23-401b-bdeb-860e7ec61441
-``` 
-https://dashboard.cypress.io/projects/pv5nq9
 
 
 ## To generate cucumber report after test is complete
