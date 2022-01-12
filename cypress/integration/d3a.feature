@@ -16,15 +16,15 @@ Feature: d3a.io
     Then I check all the video items on the page are present
 
 
-  # @create-project
-  # Scenario: Validate that a logged in user is able to create a project and its listed correctly after creation
-  #  Given I check setting menu to confirm "krishna.x.kant@icloud.com" user is logged in
-  #   When I click on Projects menu on left to create new project
-  #   Then I should navigate to Projects page
-  #   Then I click on New Project button on top right
-  #   Then I provide "Test Project #" as name and "This is sample project for demo" as description for the new project
-  #   When I click on Add button to create new project
-  #   Then I check that new project is created and is listed correctly
+  @create-project
+  Scenario: Validate that a logged in user is able to create a project and its listed correctly after creation
+   Given I check setting menu to confirm "krishna.x.kant@icloud.com" user is logged in
+    When I click on Projects menu on left to create new project
+    Then I should navigate to Projects page
+    Then I click on New Project button on top right
+    Then I provide "Test Project #" as name and "This is sample project for demo" as description for the new project
+    When I click on Add button to create new project
+    Then I check that new project is created and is listed correctly
 
 
   #@create-simulation
