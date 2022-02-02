@@ -6,7 +6,7 @@ name: run cypress tests and upload test artifacts
 on:
   schedule:
     # * is a special character in YAML so you have to quote this string
-    - cron:  '0,30 * * * *'
+    - cron:  '5 8 * * Sun'
 
 jobs:
   cypress-run:
